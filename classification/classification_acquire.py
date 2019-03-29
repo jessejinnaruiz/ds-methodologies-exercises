@@ -39,8 +39,10 @@ from pydataset import data
 
 # #     * print the number of rows of your original dataframe
 # print(df_excel.shape)
+
 # #     * print the first 5 column names
 # print('The first 5 columns: ',df_excel.columns[0:5])
+
 # #     * print the column names that have a data type of object
 # object_cols = []
 # for col in df_excel.columns:

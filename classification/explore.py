@@ -38,14 +38,14 @@ df = get_iris_data()
 # Split data into train (70%) & test (30%) samples. You should end with 2 data frames: train_df and test_df
 train_df, test_df = train_test_split(df, test_size=.30, random_state=123)
 
-# Create a swarmplot where the x-axis is each of the independent variable names (petal_length, petal_width, etc). The y-axis is the value of the variable. Use color to represent species as another dimension. Hint: You will to 'melt' the dataframe into a 'long' dataframe in order to accomplish this. What are your takeaways from this visualization?
+# Create a swarmplot where the x-axis is each of the independent variable names (petal_length, petal_width, etc). The y-axis is the value of the variable. 
+# Use color to represent species as another dimension. Hint: You will to 'melt' the dataframe into a 'long' dataframe in order to accomplish this. What are your takeaways from this visualization?
 # THE VIRGINICA SPECIES HAS LARGER MEASUREMENTS OVERALL EXCEPT FOR SEPAL WIDTH
 # THE SETOSA SPECIES HAS LOWER MEASUREMENTS OVERALL EXCEPT FOR THE SEPAL WIDTH, WHICH IS THE HIGHEST COMPARED TO OTHER SPECIES.
 train_df.head()
 
 df_melted = pd.melt(train_df, id_vars=['species_name'], value_vars=('sepal_length','sepal_width','petal_length','petal_width'), var_name='measurement in cm')
 df_melted.head()
-
 
 plt.figure(figsize=(12,12))
 sns.swarmplot(x="measurement in cm", y='value', data=df_melted, hue="species_name")
