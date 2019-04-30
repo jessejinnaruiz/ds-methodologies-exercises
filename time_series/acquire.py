@@ -42,7 +42,7 @@ def get_items():
 #         print(items)
     return items
 
-items = get_items()
+# items = get_items()
 
 
 # ### Get stores
@@ -60,7 +60,7 @@ def get_stores():
         stores = pd.concat([stores, pd.DataFrame(data['payload']['stores'])]).reset_index(drop=True)
     return stores
 
-stores = get_stores()
+# stores = get_stores()
 
 
 # ### Get sales
@@ -99,7 +99,7 @@ def get_sales():
 
 
 
-sales = get_sales()
+# sales = get_sales()
 
 
 # ### Concatenate dataframes
@@ -115,7 +115,7 @@ def get_all_data():
 
     return df
 
-sales_df = get_all_data()
+# sales_df = get_all_data()
 # sales_df.to_csv('sales_df.csv')
 
 

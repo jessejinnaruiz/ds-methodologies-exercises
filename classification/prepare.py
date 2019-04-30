@@ -9,15 +9,17 @@ iris_df = get_iris_data()
 iris_df = iris_df.drop(['species_id','measurement_id'], axis=1)
 # b. Rename the species_name column to just species.
 iris_df = iris_df.rename(columns={'species_name': 'species'})
-print(iris_df)
+# print(iris_df)
 # c. Encode the species name using a sklearn label encoder. 
 # Research the inverse_transform method of the label encoder. How might this be useful?
 from sklearn import preprocessing
 encoder = preprocessing.LabelEncoder()
 encoder.fit(iris_df.species)
 iris_df.species = (encoder.transform(iris_df.species))
-print('after encoder...')
-print(iris_df)
+# print('after encoder...')
+# print(iris_df)
+
+
 # Create a function named prep_iris that accepts the untransformed iris data, 
 # and returns the data with the transformations above applied.
 def drop_columns(iris_df):
@@ -32,15 +34,15 @@ def encode_species_col(iris_df):
     encoder.fit(iris_df.species)
     return iris_df.assign(species_encode = encoder.transform(iris_df.species))
 
-def prep_iris():
-    return df.pipe(drop_columns)\
+def prep_iris(iris_df):
+    return iris_df.pipe(drop_columns)\
         .pipe(rename_columns)\
         .pipe(encode_species_col)
 
 # 2. Titanic Data
 # Use the function you defined in acquire.py to load the titanic data set.
 from acquire import get_titanic_data
-titanic_df = (get_titanic_data())
+titanic_df = get_titanic_data()
 # print(titanic_df)
 # Write the code to perform the operations below. (Do this yourself, don't copy from the curriculum.)
 
