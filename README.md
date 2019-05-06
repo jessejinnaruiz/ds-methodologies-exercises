@@ -1,3 +1,2 @@
 # ds-methodologies-exercises
-This is a collection of work covering major machine learning algorithms. 
-Work done at Codeup in 2019.
+This is a collection of work covering machine learning algorithms done at Codeup in 2019.
