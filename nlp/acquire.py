@@ -1,0 +1,2 @@
+from acquisition import get_blog_articles_save
+from acquisition import get_news_articles
