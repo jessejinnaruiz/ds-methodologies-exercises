@@ -1,0 +1,7 @@
+*.csv
+*.txt
+sa311
+metastore_db
+spark-warehouse
+*.log
+*.tgz
