@@ -1,6 +1,6 @@
 # Data Science Methodologies 
 <br>
-##This is a collection of work covering machine learning models taught at Codeup in 2019.
+<h2> This is a collection of work covering machine learning models taught at Codeup in 2019. </h2>
 <br>
 <p> Major topics included:</p>
 
