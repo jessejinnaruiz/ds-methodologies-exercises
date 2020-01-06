@@ -1,4 +1,4 @@
--- USE zillow;
+-- USE zillow; 
 SELECT *
 FROM zillow.properties_2016 
 LEFT JOIN airconditioningtype ON properties_2016.airconditioningtypeid = airconditioningtype.airconditioningtypeid
